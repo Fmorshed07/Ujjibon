@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Aptitude Assessment</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for Trait Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Plotly.js for Career Roadmap Visualization -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="assessment-container">
+        <!-- Organization Logo -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Organization Logo" class="logo">
+        </div>
+
+        <h1>Career Aptitude Assessment</h1>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+
+        <!-- Question Container -->
+        <div id="question-container" class="question-card">
+            <h2 id="question-text">Loading questions...</h2>
+            <div class="options-grid" id="options-container"></div>
+        </div>
+
+        <!-- Results Page (Hidden Initially) -->
+        <div id="result-container" class="result-card hidden">
+            <h2>Your Career Matches</h2>
+
+            <!-- Career Matches Display -->
+            <div id="career-matches"></div>
+
+            <!-- Trait Scores Chart -->
+            <div id="chartContainer">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <!-- Career Roadmap Graph -->
+            <div id="roadmap-container">
+                <h2>Your Career Roadmap</h2>
+                <div id="roadmap-graph"></div> <!-- Roadmap Graph -->
+            </div>
+
+            <!-- Retake Button -->
+            <button onclick="location.reload()" class="retake-btn">Retake Assessment</button>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
